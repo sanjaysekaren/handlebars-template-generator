@@ -10,7 +10,7 @@ handlebars.registerHelper("list", function (items, options) {
 });
 
 handlebars.registerHelper("tableRows", function (items, options) {
-    const html = items.map(item => "<tr>" + options.fn(item) + "</tr>");
+    const html = items.map(item => options.fn(item));
     return "\n" + html.join("") + "\n";
 })
 

@@ -1,148 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-
-    </head>
-    <body>
-        <div class="report-header">
-            <img style="margin: 10px" width="50px" height="50px" src="https://img.freepik.com/premium-vector/lab-logo-vector-design_16734-26.jpg?w=2000" />
-        </div>
-        <div class="report-body">
-            <div class="report-patient-details">
-                <div class="report-patient-metadata">
-                    <div>
-                        Name: {{patientName}}
-                    </div>
-                    <div>
-                        Age/Gender: {{age}}/{{gender}}
-                    </div>
-                    <div>
-                        Patient No: {{patientNo}}
-                    </div>
-                    <div>
-                        HealthFacility: {{healthFacilityName}}
-                    </div>
+<body>
+    <div class="report-header">
+        <img style="margin: 10px" width="50px" height="50px"
+            src="https://img.freepik.com/premium-vector/lab-logo-vector-design_16734-26.jpg?w=2000" />
+    </div>
+    <div class="report-body">
+        <div class="report-patient-details">
+            <div class="report-patient-metadata">
+                <div>
+                    Name: {{patientName}}
                 </div>
                 <div>
-                    <div>
-                        Bill No: {{billNo}}
-                    </div>
-                    <div>
-                        Sample Collected On: {{sampleCollectedOn}}
-                    </div>
+                    Age/Gender: {{age}}/{{gender}}
+                </div>
+                <div>
+                    Patient No: {{patientNo}}
+                </div>
+                <div>
+                    HealthFacility: {{healthFacilityName}}
                 </div>
             </div>
-            <hr />
-            <div class="report-title">
-                {{name}}
+            <div>
+                <div>
+                    Bill No: {{billNo}}
+                </div>
+                <div>
+                    Sample Collected On: {{sampleCollectedOn}}
+                </div>
             </div>
-            <hr />
-            <div class="report-sample-details">
-                <table style="width:100%">   
-                    <tr>
-                        <th>
-                            Specimen / Test Name
-                        </th>
-                        <th>
-                            Result
-                        </th>
-                        <th>
-                            Units
-                        </th>
-                        <th>
-                            Normal Ranges
-                        </th>
-                    </tr>     
-                    {{#tableRows subSections}} 
-                        {{#ifEquals sectionType "heading" }}
-                            <td colspan="5" style="font-weight: 700;">{{name}}</td>
-                            {{#tableRows reportFields}}
-                                <td style="font-weight: 400; font-size: 14px">{{name}}</td> 
-                                <td style="font-weight: 400; font-size: 14px">{{defaultValue}} </td>
-                                <td style="font-weight: 400; font-size: 14px">{{unit}}</td>
-                                <td style="font-weight: 400; font-size: 14px">{{""}}</td>
-                            {{/tableRows}}
-                        {{else}}
-                            <td>{{name}}</td> 
-                            <td>{{defaultValue}} </td>
-                            <td>{{unit}}</td>
-                            <td>&nbsp;</td>
-                            {{!-- <td>{{normalValues.common[0].minValue}}-{{normalValues.common[0].maxValue}}</td> --}}
-                        {{/ifEquals}}
+        </div>
+        <hr />
+        <div class="report-title">
+            {{name}}
+        </div>
+        <hr />
+        <div class="report-details">
+            <div style="width:100%">
+                <div class="report-details-header">
+                    <span>
+                        Specimen / Test Name
+                    </span>
+                    <span>
+                        Result
+                    </span>
+                    <span>
+                        Units
+                    </span>
+                    <span>
+                        Normal Ranges
+                    </span>
+                </div>
+                {{#tableRows subSections}}
+                {{#ifEquals sectionType "heading" }}
+                <div class="report-details-content-heading">
+                    <div>
+                        <span colspan="5" style="font-weight: 700;">{{name}}</span>
+                    </div>
+                    {{#tableRows reportFields}}
+                    <div class="report-details-content">
+                        <span style="font-weight: 400; font-size: 14px">{{name}}</span>
+                        <span style="font-weight: 400; font-size: 14px">{{defaultValue}} </span>
+                        <span style="font-weight: 400; font-size: 14px">{{unit}}</span>
+                        <span style="font-weight: 400; font-size: 14px">&nbsp;</span>
+                    </div>
                     {{/tableRows}}
-                    <tr>
-                        <td colspan="5">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" style="text-align: center;">**End of the Report**</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="report-signature-details">
-                <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
-                <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
-                <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
+                </div>
+                {{else}}
+                <div class="report-details-content">
+                    <span>{{name}}</span>
+                    <span>{{defaultValue}} </span>
+                    <span>{{unit}}</span>
+                    <span>&nbsp;</span>
+                </div>
+                {{!-- <td>{{normalValues.common[0].minValue}}-{{normalValues.common[0].maxValue}}</td> --}}
+                {{/ifEquals}}
+                {{/tableRows}}
+                <div>
+                    <span colspan="5">&nbsp;</span>
+                </div>
+                <div class="report-end-section">
+                    <span colspan="5" style="text-align: center;">**End of the Report**</span>
+                </div>
             </div>
         </div>
-
-        <div class="report-footer">
-            <hr/>
-            Powered by RutoHealth.
+        <div class="report-signature-details">
+            <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
+            <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
+            <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
         </div>
-    </body>
-    <style>
-        body {
-            margin: 7%;
-            position: relative;
-        }
-        table tr {
-            height: 30px;
-        }
-        table :nth-child(even) {
-            background-color: #fff;
-        }
-        th {
-            font-weight: 700;
-            font-size: 22px;
-        }
-        td {
-            font-weight: 500;
-            font-size: 18px;
-        }
-        .report-header {
-            background-color: lightblue;
-            border-radius: 8px;
-        }
-        .report-header img {
-            margin: 10px;
-            border-radius: 4px;
-        }
-        .report-body .report-patient-details {
-            margin: 10px;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .report-body .report-title {
-            margin: 10px 0;
-            text-align: center;
-        }
-        .report-body .report-sample-details {
-            background-color: #f0f2f2;
-            border-radius: 4px;
-        }
-        .report-body .report-patient-details .report-patient-metadata {
+    </div>
+    <div class="report-footer">
+        <hr />
+        Powered by RutoHealth.
+    </div>
+</body>
+<style>
+    body {
+        margin: 2% 7%;
+        position: relative;
+    }
 
-        }
-        .report-body .report-signature-details {
-            display: flex;
-            justify-content: space-evenly;
-            margin: 20px auto;
-        }
-        .report-footer {
-            text-align: center;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    .table-content span {
+        height: 30px;
+    }
+
+    .table-content :nth-child(even) {
+        background-color: #fff;
+    }
+
+    th {
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .report-header {
+        background-color: lightblue;
+        border-radius: 8px;
+    }
+
+    .report-header img {
+        margin: 10px;
+        border-radius: 4px;
+    }
+
+    .report-body .report-patient-details {
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .report-body .report-title {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .report-body .report-details {
+        background-color: #f0f2f2;
+        border-radius: 4px;
+    }
+
+    .report-body .report-details .report-details-header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #cae3eb;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .report-body .report-details .report-details-header span {
+        width: 12rem;
+    }
+
+    .report-body .report-details .report-details-content-heading {
+        background-color: #fff;
+        margin: 7px;
+        padding: 2px;
+    }
+
+    .report-body .report-details .report-details-content-heading .report-details-content {
+        border-radius: 4px;
+        background: #f2f2f2;
+    }
+
+    .report-body .report-details .report-details-content {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    .report-body .report-details .report-details-content span {
+        width: 12rem;
+        border-right: 1px dotted;
+    }
+
+    .report-body .report-details .report-end-section {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .report-body .report-patient-details .report-patient-metadata {}
+
+    .report-body .report-signature-details {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px auto;
+    }
+
+    .report-footer {
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
 </html>

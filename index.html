@@ -1,168 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
 
-    </head>
-    <body>
-        <div class="report-header">
-            <img style="margin: 10px" width="50px" height="50px" src="https://img.freepik.com/premium-vector/lab-logo-vector-design_16734-26.jpg?w=2000" />
-        </div>
-        <div class="report-body">
-            <div class="report-patient-details">
-                <div class="report-patient-metadata">
-                    <div>
-                        Name: Alan
-                    </div>
-                    <div>
-                        Age/Gender: 12/female
-                    </div>
-                    <div>
-                        Patient No: 123
-                    </div>
-                    <div>
-                        HealthFacility: 
-                    </div>
+<head>
+
+</head>
+
+<body>
+    <div class="report-header">
+        <img style="margin: 10px" width="50px" height="50px"
+            src="https://img.freepik.com/premium-vector/lab-logo-vector-design_16734-26.jpg?w=2000" />
+    </div>
+    <div class="report-body">
+        <div class="report-patient-details">
+            <div class="report-patient-metadata">
+                <div>
+                    Name: Alan
                 </div>
                 <div>
-                    <div>
-                        Bill No: 12
-                    </div>
-                    <div>
-                        Sample Collected On: 
-                    </div>
+                    Age/Gender: 12/female
+                </div>
+                <div>
+                    Patient No: 123
+                </div>
+                <div>
+                    HealthFacility: 
                 </div>
             </div>
-            <hr />
-            <div class="report-title">
-                Complete Haemogram
-            </div>
-            <hr />
-            <div class="report-sample-details">
-                <table style="width:100%">   
-                    <tr>
-                        <th>
-                            Specimen / Test Name
-                        </th>
-                        <th>
-                            Result
-                        </th>
-                        <th>
-                            Units
-                        </th>
-                        <th>
-                            Normal Ranges
-                        </th>
-                    </tr>     
-
-<tr>                            <td>Haemoglobin</td> 
-                            <td> </td>
-                            <td>g/dL</td>
-                            <td>&nbsp;</td>
-</tr><tr>                            <td>RBC Count</td> 
-                            <td> </td>
-                            <td>m/c mm</td>
-                            <td>&nbsp;</td>
-</tr><tr>                            <td>Total W.B.C Count</td> 
-                            <td> </td>
-                            <td>/cu mm</td>
-                            <td>&nbsp;</td>
-</tr><tr>                            <td colspan="5" style="font-weight: 700;">Diff W.B.C Count</td>
-
-<tr>                                <td style="font-weight: 400; font-size: 14px">Polymorphs</td> 
-                                <td style="font-weight: 400; font-size: 14px"> </td>
-                                <td style="font-weight: 400; font-size: 14px">%</td>
-                                <td style="font-weight: 400; font-size: 14px">[object Object]</td>
-</tr><tr>                                <td style="font-weight: 400; font-size: 14px">Lymphocytes</td> 
-                                <td style="font-weight: 400; font-size: 14px"> </td>
-                                <td style="font-weight: 400; font-size: 14px">%</td>
-                                <td style="font-weight: 400; font-size: 14px">[object Object]</td>
-</tr><tr>                                <td style="font-weight: 400; font-size: 14px">Mid Cells</td> 
-                                <td style="font-weight: 400; font-size: 14px"> </td>
-                                <td style="font-weight: 400; font-size: 14px">%</td>
-                                <td style="font-weight: 400; font-size: 14px">[object Object]</td>
-</tr>
-</tr><tr>                            <td>Platelets Count</td> 
-                            <td> </td>
-                            <td>/ cmm</td>
-                            <td>&nbsp;</td>
-</tr><tr>                            <td>P C V</td> 
-                            <td> </td>
-                            <td>%</td>
-                            <td>&nbsp;</td>
-</tr>
-                    <tr>
-                        <td colspan="5">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" style="text-align: center;">**End of the Report**</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="report-signature-details">
-                <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
-                <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
-                <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
+            <div>
+                <div>
+                    Bill No: 12
+                </div>
+                <div>
+                    Sample Collected On: 
+                </div>
             </div>
         </div>
-
-        <div class="report-footer">
-            <hr/>
-            Powered by RutoHealth.
+        <hr />
+        <div class="report-title">
+            Complete Haemogram
         </div>
-    </body>
-    <style>
-        body {
-            margin: 7%;
-            position: relative;
-        }
-        table tr {
-            height: 30px;
-        }
-        table :nth-child(even) {
-            background-color: #fff;
-        }
-        th {
-            font-weight: 700;
-            font-size: 22px;
-        }
-        td {
-            font-weight: 500;
-            font-size: 18px;
-        }
-        .report-header {
-            background-color: lightblue;
-            border-radius: 8px;
-        }
-        .report-header img {
-            margin: 10px;
-            border-radius: 4px;
-        }
-        .report-body .report-patient-details {
-            margin: 10px;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .report-body .report-title {
-            margin: 10px 0;
-            text-align: center;
-        }
-        .report-body .report-sample-details {
-            background-color: #f0f2f2;
-            border-radius: 4px;
-        }
-        .report-body .report-patient-details .report-patient-metadata {
+        <hr />
+        <div class="report-details">
+            <div style="width:100%">
+                <div class="report-details-header">
+                    <span>
+                        Specimen / Test Name
+                    </span>
+                    <span>
+                        Result
+                    </span>
+                    <span>
+                        Units
+                    </span>
+                    <span>
+                        Normal Ranges
+                    </span>
+                </div>
 
-        }
-        .report-body .report-signature-details {
-            display: flex;
-            justify-content: space-evenly;
-            margin: 20px auto;
-        }
-        .report-footer {
-            text-align: center;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+                <div class="report-details-content">
+                    <span>Haemoglobin</span>
+                    <span> </span>
+                    <span>g/dL</span>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="report-details-content">
+                    <span>RBC Count</span>
+                    <span> </span>
+                    <span>m/c mm</span>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="report-details-content">
+                    <span>Total W.B.C Count</span>
+                    <span> </span>
+                    <span>/cu mm</span>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="report-details-content-heading">
+                    <div>
+                        <span colspan="5" style="font-weight: 700;">Diff W.B.C Count</span>
+                    </div>
+
+                    <div class="report-details-content">
+                        <span style="font-weight: 400; font-size: 14px">Polymorphs</span>
+                        <span style="font-weight: 400; font-size: 14px"> </span>
+                        <span style="font-weight: 400; font-size: 14px">%</span>
+                        <span style="font-weight: 400; font-size: 14px">&nbsp;</span>
+                    </div>
+                    <div class="report-details-content">
+                        <span style="font-weight: 400; font-size: 14px">Lymphocytes</span>
+                        <span style="font-weight: 400; font-size: 14px"> </span>
+                        <span style="font-weight: 400; font-size: 14px">%</span>
+                        <span style="font-weight: 400; font-size: 14px">&nbsp;</span>
+                    </div>
+                    <div class="report-details-content">
+                        <span style="font-weight: 400; font-size: 14px">Mid Cells</span>
+                        <span style="font-weight: 400; font-size: 14px"> </span>
+                        <span style="font-weight: 400; font-size: 14px">%</span>
+                        <span style="font-weight: 400; font-size: 14px">&nbsp;</span>
+                    </div>
+
+                </div>
+                <div class="report-details-content">
+                    <span>Platelets Count</span>
+                    <span> </span>
+                    <span>/ cmm</span>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="report-details-content">
+                    <span>P C V</span>
+                    <span> </span>
+                    <span>%</span>
+                    <span>&nbsp;</span>
+                </div>
+
+                <div>
+                    <span colspan="5">&nbsp;</span>
+                </div>
+                <div class="report-end-section">
+                    <span colspan="5" style="text-align: center;">**End of the Report**</span>
+                </div>
+            </div>
+        </div>
+        <div class="report-signature-details">
+            <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
+            <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
+            <img width="70px" height="70px" src="https://i.stack.imgur.com/izrMq.jpg" />
+        </div>
+    </div>
+
+    <div class="report-footer">
+        <hr />
+        Powered by RutoHealth.
+    </div>
+</body>
+<style>
+    body {
+        margin: 7%;
+        position: relative;
+    }
+
+    .table-content span {
+        height: 30px;
+    }
+
+    .table-content :nth-child(even) {
+        background-color: #fff;
+    }
+
+    th {
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .report-header {
+        background-color: lightblue;
+        border-radius: 8px;
+    }
+
+    .report-header img {
+        margin: 10px;
+        border-radius: 4px;
+    }
+
+    .report-body .report-patient-details {
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .report-body .report-title {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .report-body .report-details {
+        background-color: #f0f2f2;
+        border-radius: 4px;
+    }
+    .report-body .report-details .report-details-header {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #cae3eb;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    .report-body .report-details .report-details-header span {
+        width: 12rem;
+    }
+    .report-body .report-details .report-details-content-heading {
+        background-color: #fff;
+        margin: 7px;
+        padding: 2px;
+    }
+    .report-body .report-details .report-details-content-heading .report-details-content {
+        border-radius: 4px;
+        background: #f2f2f2;
+    }
+
+    .report-body .report-details .report-details-content {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+    }
+    .report-body .report-details .report-details-content span {
+        width: 12rem;
+        border-right:  1px dotted;
+    }
+
+    .report-body .report-details .report-end-section {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .report-body .report-patient-details .report-patient-metadata {}
+
+    .report-body .report-signature-details {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px auto;
+    }
+
+    .report-footer {
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
 </html>
